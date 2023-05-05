@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+        <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
         <title>Clearsky</title>
     </head>
     <body>
@@ -39,8 +39,7 @@
                 <div id="suggestions" class="form__suggestions"></div>
             </form>
         </header>
-        
-        
+
         <main>
             <div class="container">
                 <div class="section-main__favorites">
@@ -52,9 +51,16 @@
             </div>
             <section class="section-main hidden">
                 <div class="section-div__localisation">
-                    <article class="section-main__localisation">
+                    <ul class="list section-main__localisation">
+                        <li
+                            class="section-main__localisation__txt"
+                            id="loc"
+                        ></li>
+                    </ul>
+                    <!-- <article class="section-main__localisation">
                         <p class="section-main__localisation__txt" id="loc"></p>
-                    </article>
+                        <a href="#">⭐</a>
+                    </article> -->
                     <article class="section-main__weather">
                         <div class="section-main__weather-info">
                             <p
