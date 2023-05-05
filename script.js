@@ -1,16 +1,20 @@
 // get favorites from local storage or empty array
-var favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
 // add class 'fav' to each favorite
 favorites.forEach(function (favorite) {
     document.getElementById(favorite).className = "fav";
 });
+
 // register click event listener
 document.querySelector(".list").addEventListener("click", function (e) {
-    var id = e.target.id,
+    let id = e.target.id,
         item = e.target,
         index = favorites.indexOf(id);
+
     // return if target doesn't have an id (shouldn't happen)
     if (!id) return;
+
     // item is not favorite
     if (index == -1) {
         favorites.push(id);
@@ -20,6 +24,7 @@ document.querySelector(".list").addEventListener("click", function (e) {
         favorites.splice(index, 1);
         item.className = "";
     }
+
     // store array in local storage
     localStorage.setItem("favorites", JSON.stringify(favorites));
 });
@@ -48,7 +53,6 @@ async function searchCities(query) {
             `https://api.weatherapi.com/v1/search.json?key=dfb545a573604021be494635230205&q=${query}`
         );
         const cities = await response.json();
-
         if (Array.isArray(cities)) {
             const suggestions = cities
                 .map(
