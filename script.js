@@ -100,14 +100,14 @@ searchInput.addEventListener("keyup", () => {
     }, 500);
 });
 
-// async function toGetValuesfromCity2(name) {
-//     let response = await fetch(
-//         `    https://api.weatherapi.com/v1/forecast.json?key=dfb545a573604021be494635230205&q=${name}&days=4&aqi=yes&alerts=no`
-//     );
-//     let valuesAPI = await response.json();
-//     console.log(valuesAPI);
-// }
-// toGetValuesfromCity2("Caen");
+async function toGetValuesfromCity2(name) {
+    let response = await fetch(
+        `    https://api.weatherapi.com/v1/forecast.json?key=dfb545a573604021be494635230205&q=${name}&days=4&aqi=yes&alerts=no`
+    );
+    let valuesAPI = await response.json();
+    console.log(valuesAPI);
+}
+toGetValuesfromCity2("Caen");
 // async function toGetValuesfromCity(name) {
 //     let response = await fetch(
 //         `https://api.weatherapi.com/v1/current.json?key=dfb545a573604021be494635230205&q=${name}&aqi=no`
