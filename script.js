@@ -11,6 +11,7 @@ function removeAccents(str) {
 
 const searchInput = document.querySelector('input[name="search"]');
 const suggestionsList = document.querySelector("#suggestions");
+const header = document.querySelector("header");
 let img = document.querySelector("#icon__weather");
 
 async function searchCities(query) {
@@ -33,6 +34,15 @@ async function searchCities(query) {
             );
             cityButtons.forEach((button) => {
                 button.addEventListener("click", async () => {
+
+                    // changement de header avec une animation
+                    // au clic ajouter l'animation à header--landing
+                    // header.
+
+                    header.classList.remove('header--landing');
+                    document.querySelector("form").classList.remove('form--landing');
+                    document.querySelector(".section-main").classList.remove('hidden');
+
                     const location = button.dataset.location;
                     searchInput.value = location;
                     suggestionsList.innerHTML = "";

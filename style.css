@@ -11,6 +11,18 @@
     }
 }
 
+
+/* UTILITIES */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
 /* test */
 
 body,
@@ -38,12 +50,30 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: #036ba1;
+    height: 150px;
+    width: 100%;
+    transition: height 1000ms ease-in;
 }
+
+.header--landing {
+    height: 80vh;
+    justify-content: center;
+    gap: 1.5rem;
+    /* width: 100%; */
+    /* position: sticky;
+    top: 0;
+     */
+}
+
+
 .brand {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
+
+/* .brand--landing {
+} */
 
 .brand__logo {
     position: relative;
@@ -88,7 +118,11 @@ main {
     flex-direction: column;
     align-items: center;
     width: 60%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form--landing {
+    padding-bottom: 10vh;
 }
 
 .form__label {
@@ -130,8 +164,20 @@ button {
 .section-main {
     width: 80%;
     margin: 0 auto;
+    /* position: sticky; */
 }
 
+
+
+.section-main__favorites {
+    /* position: fixed; */
+    /* bottom: 0;
+    margin-bottom: 5rem;
+    width: 100%; */
+    /* position: sticky; */
+    height: 20vh;
+    margin-bottom: 2rem;
+}
 .section-main__weather-icon {
     width: 120px;
     height: 120px;
@@ -174,6 +220,14 @@ button {
     padding-left: 5rem; */
 }
 
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
 @media screen and (max-width: 1024px) {
     .form__suggestions {
         width: 100%;
@@ -185,6 +239,12 @@ button {
         flex-direction: row;
         justify-content: space-around;
     }
+    
+    .header--landing {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
     .header__img {
         width: 100px;
     }
