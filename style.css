@@ -1,8 +1,11 @@
 :root {
+    font-family: "Fira Code";
     font-size: 18px;
     --primary-color: #036ba1;
     --secondary-color: rgba(0, 150, 199, 0.6);
     --ligth-grey: rgba(229, 229, 229, 1);
+    --light-blue: rgba(0, 150, 199, 0.3);
+    /* font-family: ; */
 }
 
 @media screen and (min-width: 1024px) {
@@ -37,10 +40,10 @@ body {
     background-color: var(--ligth-grey);
 }
 
-main {
+/* main {
     max-width: 1280px;
     margin: 0 auto;
-}
+} */
 
 /* HEADER  */
 
@@ -71,9 +74,6 @@ main {
     align-items: center;
     gap: 2rem;
 }
-
-/* .brand--landing {
-} */
 
 .brand__logo {
     position: relative;
@@ -164,6 +164,8 @@ button {
 .section-main {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
     /* position: sticky; */
 }
 
@@ -177,7 +179,23 @@ button {
     /* position: sticky; */
     height: 20vh;
     margin-bottom: 2rem;
+
 }
+
+.btn-container {
+    margin: 1rem;
+}
+
+.btn-geoloc {
+    font-size: 0.75rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+}
+
 .section-main__weather-icon {
     width: 120px;
     height: 120px;
@@ -190,7 +208,6 @@ button {
     padding: 0.6rem;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 0.9rem;
 }
@@ -220,17 +237,72 @@ button {
     padding-left: 5rem; */
 }
 
+.future__lst{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem auto 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 80%;
+    align-items: center;
+}
 
-
-
-
-
+.future__itm{
+    background-color: var(--light-blue);
+    width: fit-content;
+    aspect-ratio: 1 / 1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
 
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .form__suggestions {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-main, 
+    .section-main__weather,
+    .section-main__,
+    .future,
+    .future__lst, 
+    .future__itm{
+        margin: 0;
+    }
+    .section-main{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    }
+
+    .future__lst{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+
+
+    .future__itm{
+        width: 150px;
+    }
+
+    .column{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 1rem;
+        margin-left: 5%;
+        margin-bottom: 5%;
     }
 }
 
@@ -255,9 +327,9 @@ button {
         top: 18px;
     }
 
-    .section-div__localisation {
+    /* .section-div__localisation {
         width: 60%;
-    }
+    } */
 
     @keyframes fadeOut {
         0% {

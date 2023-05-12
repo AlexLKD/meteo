@@ -4,17 +4,24 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
-        <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+        <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
         <title>Clearsky</title>
     </head>
+
     <body>
         <header class="header header--landing">
             <div class="brand brand--landing">
                 <a class="brand__logo" href="index.html">
                     <img
                         class="brand__img"
-                        src="/img/sun-quality.png"
+                        src="img/sun-quality.png"
                         alt="logo Clearsky"
                     />
                     <img
@@ -39,43 +46,71 @@
                 <div id="suggestions" class="form__suggestions"></div>
             </form>
         </header>
-        
-        
+
         <main>
             <div class="container">
+                <div class="btn-container">
+                    <button class="btn-geoloc" id="btn-geoloc">
+                        Obtenir la météo par Géolocalisation
+                    </button>
+                </div>
+
                 <div class="section-main__favorites">
                     <h2>Vos favoris</h2>
                     <div id="city-favorite">
                         <p class="">Caen</p>
                     </div>
                 </div>
-            </div>
-            <section class="section-main hidden">
-                <div class="section-div__localisation">
-                    <article class="section-main__localisation">
-                        <p class="section-main__localisation__txt" id="loc"></p>
-                    </article>
-                    <article class="section-main__weather">
-                        <div class="section-main__weather-info">
-                            <p
-                                class="section-main__weather-temp"
-                                id="temperature"
-                            ></p>
-                            <img
-                                id="icon__weather"
-                                class="section-main__weather-icon"
-                                src=""
-                            />
+                <div class="column">
+                    <section class="section-main hidden">
+                        <div class="section-div__localisation hidden">
+                            <article class="section-main__localisation">
+                                <p
+                                    class="section-main__localisation__txt"
+                                    id="loc"
+                                ></p>
+                            </article>
+                            <article class="section-main__weather">
+                                <div class="section-main__weather-info">
+                                    <p
+                                        class="section-main__weather-temp"
+                                        id="temperature"
+                                    ></p>
+                                    <img
+                                        id="icon__weather"
+                                        class="section-main__weather-icon"
+                                        src=""
+                                    />
+                                </div>
+                                <div>
+                                    <p id="sunrise"></p>
+                                    <p id="sunset"></p>
+                                </div>
+                            </article>
                         </div>
-                        <div>
-                            <p id="sunrise"></p>
-                            <p id="sunset"></p>
-                        </div>
-                    </article>
+                    </section>
+                    <div class="future hidden">
+                        <ul class="future__lst">
+                            <li class="future__itm">
+                                <p id="futureDate__date1"></p>
+                                <img id="icon__weather--future-day1" />
+                                <p id="futureDate__temp1"></p>
+                            </li>
+                            <li class="future__itm">
+                                <p id="futureDate__date2"></p>
+                                <img id="icon__weather--future-day2" />
+                                <p id="futureDate__temp2"></p>
+                            </li>
+                            <li class="future__itm">
+                                <p id="futureDate__date3"></p>
+                                <img id="icon__weather--future-day3" />
+                                <p id="futureDate__temp3"></p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
+            </div>
         </main>
-
         <script src="script.js"></script>
     </body>
 </html>
